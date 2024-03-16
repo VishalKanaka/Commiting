@@ -308,8 +308,8 @@ String currentTitle = driver.getTitle();
 		  //test case 3
 		  @And("user is able to see Testing service logo")
 		    public void Testing_logo_check() throws InterruptedException {
-			  Thread.sleep(2000);
-			  basePage.scrollToElement(Constants.Testing_logo);
+			  Thread.sleep(3000);
+			 // basePage.scrollToElement(Constants.Testing_logo);
 			  basePage.validateElementPresentAssertion(Constants.Testing_logo);
 		    	
 		    		System.out.println("testing logo visible");
@@ -318,16 +318,16 @@ String currentTitle = driver.getTitle();
 		  @And("user is able to see Testing Label")
 		    public void Testing_label() throws InterruptedException {
 		    	
-			  basePage.scrollToElement(Constants.Testing_label);
+			  //basePage.scrollToElement(Constants.Testing_label);
 		    	basePage.validateElementPresentAssertion(Constants.Testing_label);
 		    		basePage.compareText(Constants.Testing_label, "Testing");
 		    		System.out.println("testing lebel visible");
 		    	
 		    }
 		  @When("Clicks on Testing")
-			public void Testing_service_click() {
+			public void Testing_service_click() throws InterruptedException {
 				System.out.println("Testing_service_click");
-		        
+				 //basePage.scrollToElement(Constants.Testing_label);
 				basePage.click(Constants.Testing_label);
 			}
 		  @Then("Navigates to Testing service page")
@@ -346,7 +346,7 @@ String currentTitle = driver.getTitle();
 			}
 		  @And("user is able to see We focus on the best practices for it solutions and services label")
 		    public void We_Practice_label() throws InterruptedException {
-			  basePage.scrollToElement(Constants.We_focus_label1);
+			  //basePage.scrollToElement(Constants.We_focus_label1);
 		    	basePage.validateElementPresentAssertion(Constants.We_focus_label1);
 		    		basePage.compareText(Constants.We_focus_label1, "We focus on the best practices for it solutions and services");
 		    	
@@ -356,7 +356,7 @@ String currentTitle = driver.getTitle();
 		  @And("user is able to see Full Stack service logo")
 		    public void Fullstack_logo_check() throws InterruptedException {
 			  Thread.sleep(2000);
-			  basePage.scrollToElement(Constants.fullstack_logo);
+			  //basePage.scrollToElement(Constants.fullstack_logo);
 			  basePage.validateElementPresentAssertion(Constants.fullstack_logo);
 		    		System.out.println("fullstack logo visible");
 		    	
@@ -364,7 +364,7 @@ String currentTitle = driver.getTitle();
 		    
 		  @And("user is able to see Full Stack Label")
 		    public void Fullstack_label() throws InterruptedException {
-			  basePage.scrollToElement(Constants.fullstack_label);
+			 // basePage.scrollToElement(Constants.fullstack_label);
 			 basePage.validateElementPresentAssertion(Constants.fullstack_label) ;
 		    		basePage.compareText(Constants.fullstack_label, "Full Stack");
 		    		System.out.println("fullstack lebel visible");
@@ -394,7 +394,7 @@ String currentTitle = driver.getTitle();
 		  @And("user is able to see DevOps service logo")
 		    public void DevOps_logo_check() throws InterruptedException {
 			  Thread.sleep(2000);
-			  basePage.scrollToElement(Constants.Devops_logo);
+			  //basePage.scrollToElement(Constants.Devops_logo);
 
 			  basePage.validateElementPresentAssertion(Constants.Devops_logo);
 			  
@@ -403,7 +403,7 @@ String currentTitle = driver.getTitle();
 		    }
 		  @And("user is able to see DevOps Label")
 		    public void DevOps_label() throws InterruptedException {
-			  basePage.scrollToElement(Constants.Devops_label);
+			 // basePage.scrollToElement(Constants.Devops_label);
 
 			  basePage.validateElementPresentAssertion(Constants.Devops_label) ;
 		    		basePage.compareText(Constants.Devops_label, "Devops");
@@ -414,11 +414,11 @@ String currentTitle = driver.getTitle();
 			public void DevOps_service_click() throws InterruptedException {
 				System.out.println("Devops_service_click");
 		        Thread.sleep(2000);
-				basePage.click(Constants.Devops_logo);
+				basePage.click(Constants.Devops_label);
 			}
 		  @Then("Navigates to DevOps service page")
 			public void navigates_to_DevOps_service_page() {
-				System.out.println("user navigates to Azure service page");
+				System.out.println("user navigates to DevOps service page");
 				 String currentTitle = driver.getTitle();
 	  			    
 	  			    // Define the expected URL for the home page
