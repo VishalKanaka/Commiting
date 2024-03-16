@@ -72,7 +72,8 @@ public class Constants {
     public static final String CONTENT_BELOW_IMAGE_3 = "/html/body/div[1]/section[4]/div/div[2]/div[2]/div[3]/div/p";
 
   
-  public static final String Home_button ="//*[@id=\"nav\"]/li[1]/a";
+  
+	public static final String Home_button ="//*[@id=\"nav\"]/li[1]/a";
 	public static final String SERVIVE_DD = "//*[@id='nav']/li[3]/a";
 	public static final String About_Company = "//h3[contains(text(),'About')]";
 	public static final String Empowering_label = "//div[@class='container']/div/div/h4";
@@ -110,6 +111,7 @@ public class Constants {
 	public static final String Devops_logo = "//div[@class='container']/div/div/div[3]/div/div/div/img[@src='img/icons/20.png']";
 	public static final String Devops_label = "//div[@class='container']/div/div/div[3]/div/div/div[2]/h3/a";
 	public static final String We_focus_label3= "//div[@class='container']/div/div/div[3]/div/div/div[2]/p";
+	
 }
 
 
