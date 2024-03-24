@@ -55,11 +55,7 @@ import StepDefinitions.SetupClass;
 	    public void home_button_check() throws InterruptedException {
 	    	basePage.validateElementPresentAssertion(Constants.Home_button);
 	    	basePage.compareText(Constants.Home_button, "Home");
-//	    	if(basePage.verifyElementPresent(Constants.Home_button) && basePage.compareText(Constants.Home_button, "Home")) {
-//	    		return true;
-//	    	}
-//	    	else
-//	    		return false;
+
 	    }
 	    @When("user clicks Home")
 	    public void clicks_home() {
@@ -72,14 +68,12 @@ import StepDefinitions.SetupClass;
 	    public void navigates_aboutus() {
 	    	String currentUrl = driver.getCurrentUrl();
 	        
-	        // Define the expected URL for the home page
-	        String expectedUrl = utils.getProperty("Public_URL"); // Replace with the actual expected URL
+	       
+	        String expectedUrl = utils.getProperty("Public_URL"); 
 	        
-	        // Compare the current URL with the expected URL
 	        assertEquals("User did not navigate to the correct URL after clicking Home", expectedUrl, currentUrl);
 	        
 	        System.out.println("User navigated to the correct URL: " + currentUrl);
-	    	//System.out.println("Navigated to About us");
 	    }
 	   
 	    @And("user is able to see services button")
@@ -149,10 +143,8 @@ import StepDefinitions.SetupClass;
 			driver.navigate().to(utils.getProperty("Public_URL"));
 			String currentTitle = driver.getTitle();
 		    
-		    // Define the expected URL for the home page
 		    String expectedTitle = "Nandamuri Solutions"; // Replace with the actual expected URL
 		    
-		    // Compare the current URL with the expected URL
 		    assertEquals("User did not navigate to the correct URL ", expectedTitle, currentTitle);
 		    
 		    System.out.println("User navigated to the correct URL: " + currentTitle);
@@ -163,10 +155,8 @@ import StepDefinitions.SetupClass;
 				System.out.println("user navigates to Azure service page");
 				String currentTitle = driver.getTitle();
 			    
-			    // Define the expected URL for the home page
 			    String expectedTitle = "Azure Services"; // Replace with the actual expected URL
 			    
-			    // Compare the current URL with the expected URL
 			    assertEquals("User did not navigate to the correct URL ", expectedTitle, currentTitle);
 			    
 			    System.out.println("User navigated to the correct URL: " + currentTitle);
@@ -177,10 +167,8 @@ import StepDefinitions.SetupClass;
 				System.out.println("user navigates to ML service page");
 String currentTitle = driver.getTitle();
 			    
-			    // Define the expected URL for the home page
 			    String expectedTitle = "Machine Learning Services"; // Replace with the actual expected URL
 			    
-			    // Compare the current URL with the expected URL
 			    assertEquals("User did not navigate to the correct URL ", expectedTitle, currentTitle);
 			    
 			    System.out.println("User navigated to the correct URL: " + currentTitle);
@@ -191,10 +179,8 @@ String currentTitle = driver.getTitle();
 				System.out.println("user navigates to Data Engineering service page");
 String currentTitle = driver.getTitle();
 			    
-			    // Define the expected URL for the home page
-			    String expectedTitle = "Data Engineering Services"; // Replace with the actual expected URL
+			    String expectedTitle = "Data Engineering Services"; 
 			    
-			    // Compare the current URL with the expected URL
 			    assertEquals("User did not navigate to the correct URL ", expectedTitle, currentTitle);
 			    
 			    System.out.println("User navigated to the correct URL: " + currentTitle);
@@ -205,10 +191,8 @@ String currentTitle = driver.getTitle();
 				System.out.println("user navigates to Testing service page ");
 String currentTitle = driver.getTitle();
 			    
-			    // Define the expected URL for the home page
-			    String expectedTitle = "Testing Services"; // Replace with the actual expected URL
+			    String expectedTitle = "Testing Services"; 
 			    
-			    // Compare the current URL with the expected URL
 			    assertEquals("User did not navigate to the correct URL ", expectedTitle, currentTitle);
 			    
 			    System.out.println("User navigated to the correct URL: " + currentTitle);
@@ -219,10 +203,8 @@ String currentTitle = driver.getTitle();
 				System.out.println("user navigates to Fullstack service page");
 String currentTitle = driver.getTitle();
 			    
-			    // Define the expected URL for the home page
-			    String expectedTitle = "Full Stack Services"; // Replace with the actual expected URL
+			    String expectedTitle = "Full Stack Services"; 
 			    
-			    // Compare the current URL with the expected URL
 			    assertEquals("User did not navigate to the correct URL ", expectedTitle, currentTitle);
 			    
 			    System.out.println("User navigated to the correct URL: " + currentTitle);
@@ -233,10 +215,8 @@ String currentTitle = driver.getTitle();
 				System.out.println("user navigates to Devops service page ");
 String currentTitle = driver.getTitle();
 			    
-			    // Define the expected URL for the home page
-			    String expectedTitle = "DevOps Services"; // Replace with the actual expected URL
+			    String expectedTitle = "DevOps Services"; 
 			    
-			    // Compare the current URL with the expected URL
 			    assertEquals("User did not navigate to the correct URL ", expectedTitle, currentTitle);
 			    
 			    System.out.println("User navigated to the correct URL: " + currentTitle);
@@ -309,7 +289,7 @@ String currentTitle = driver.getTitle();
 		  @And("user is able to see Testing service logo")
 		    public void Testing_logo_check() throws InterruptedException {
 			  Thread.sleep(3000);
-			 // basePage.scrollToElement(Constants.Testing_logo);
+			
 			  basePage.validateElementPresentAssertion(Constants.Testing_logo);
 		    	
 		    		System.out.println("testing logo visible");
@@ -318,7 +298,7 @@ String currentTitle = driver.getTitle();
 		  @And("user is able to see Testing Label")
 		    public void Testing_label() throws InterruptedException {
 		    	
-			  //basePage.scrollToElement(Constants.Testing_label);
+			 
 		    	basePage.validateElementPresentAssertion(Constants.Testing_label);
 		    		basePage.compareText(Constants.Testing_label, "Testing");
 		    		System.out.println("testing lebel visible");
@@ -327,7 +307,6 @@ String currentTitle = driver.getTitle();
 		  @When("Clicks on Testing")
 			public void Testing_service_click() throws InterruptedException {
 				System.out.println("Testing_service_click");
-				 //basePage.scrollToElement(Constants.Testing_label);
 				basePage.click(Constants.Testing_label);
 			}
 		  @Then("Navigates to Testing service page")
@@ -335,10 +314,9 @@ String currentTitle = driver.getTitle();
 			  System.out.println("user navigates to Testing service page ");
 			  String currentTitle = driver.getTitle();
 			  			    
-			  			    // Define the expected URL for the home page
-			  			    String expectedTitle = "Testing Services"; // Replace with the actual expected URL
 			  			    
-			  			    // Compare the current URL with the expected URL
+			  			    String expectedTitle = "Testing Services"; 
+			  			    
 			  			    assertEquals("User did not navigate to the correct URL ", expectedTitle, currentTitle);
 			  			    
 			  			    System.out.println("User navigated to the correct URL: " + currentTitle);
@@ -346,7 +324,6 @@ String currentTitle = driver.getTitle();
 			}
 		  @And("user is able to see We focus on the best practices for it solutions and services label")
 		    public void We_Practice_label() throws InterruptedException {
-			  //basePage.scrollToElement(Constants.We_focus_label1);
 		    	basePage.validateElementPresentAssertion(Constants.We_focus_label1);
 		    		basePage.compareText(Constants.We_focus_label1, "We focus on the best practices for it solutions and services");
 		    	
@@ -356,7 +333,6 @@ String currentTitle = driver.getTitle();
 		  @And("user is able to see Full Stack service logo")
 		    public void Fullstack_logo_check() throws InterruptedException {
 			  Thread.sleep(2000);
-			  //basePage.scrollToElement(Constants.fullstack_logo);
 			  basePage.validateElementPresentAssertion(Constants.fullstack_logo);
 		    		System.out.println("fullstack logo visible");
 		    	
@@ -364,7 +340,6 @@ String currentTitle = driver.getTitle();
 		    
 		  @And("user is able to see Full Stack Label")
 		    public void Fullstack_label() throws InterruptedException {
-			 // basePage.scrollToElement(Constants.fullstack_label);
 			 basePage.validateElementPresentAssertion(Constants.fullstack_label) ;
 		    		basePage.compareText(Constants.fullstack_label, "Full Stack");
 		    		System.out.println("fullstack lebel visible");
@@ -381,10 +356,8 @@ String currentTitle = driver.getTitle();
 			  System.out.println("user navigates to Fullstack service page");
 			  String currentTitle = driver.getTitle();
 			  			    
-			  			    // Define the expected URL for the home page
-			  			    String expectedTitle = "Full Stack Services"; // Replace with the actual expected URL
+			  			    String expectedTitle = "Full Stack Services"; 
 			  			    
-			  			    // Compare the current URL with the expected URL
 			  			    assertEquals("User did not navigate to the correct URL ", expectedTitle, currentTitle);
 			  			    
 			  			    System.out.println("User navigated to the correct URL: " + currentTitle);
@@ -394,7 +367,6 @@ String currentTitle = driver.getTitle();
 		  @And("user is able to see DevOps service logo")
 		    public void DevOps_logo_check() throws InterruptedException {
 			  Thread.sleep(2000);
-			  //basePage.scrollToElement(Constants.Devops_logo);
 
 			  basePage.validateElementPresentAssertion(Constants.Devops_logo);
 			  
@@ -403,7 +375,6 @@ String currentTitle = driver.getTitle();
 		    }
 		  @And("user is able to see DevOps Label")
 		    public void DevOps_label() throws InterruptedException {
-			 // basePage.scrollToElement(Constants.Devops_label);
 
 			  basePage.validateElementPresentAssertion(Constants.Devops_label) ;
 		    		basePage.compareText(Constants.Devops_label, "Devops");
@@ -421,10 +392,9 @@ String currentTitle = driver.getTitle();
 				System.out.println("user navigates to DevOps service page");
 				 String currentTitle = driver.getTitle();
 	  			    
-	  			    // Define the expected URL for the home page
-	  			    String expectedTitle = "DevOps Services"; // Replace with the actual expected URL
+	  			   
+	  			    String expectedTitle = "DevOps Services"; 
 	  			    
-	  			    // Compare the current URL with the expected URL
 	  			    assertEquals("User did not navigate to the correct URL ", expectedTitle, currentTitle);
 	  			    
 	  			    System.out.println("User navigated to the correct URL: " + currentTitle);
@@ -435,7 +405,6 @@ String currentTitle = driver.getTitle();
 		  @And("user is able to see the video button logo")
 		    public void Videobutton_logo_check() throws InterruptedException {
 			  
-			  //Thread.sleep(4000);
 			  basePage.scrollToElement(Constants.video_btn_logo);
 			  Thread.sleep(2000);
 			  basePage.validateElementPresentAssertion(Constants.video_btn_logo);
