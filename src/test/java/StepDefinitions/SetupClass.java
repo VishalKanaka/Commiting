@@ -7,6 +7,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
@@ -39,7 +40,9 @@ public class SetupClass {
 		System.out.println("Setting up the browser");
 		System.setProperty(utils.getProperty("Chrome"), projectPath + utils.selectFromChain("SelectedVersion"));
 
-		driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		basePage = new BasePage(driver);
