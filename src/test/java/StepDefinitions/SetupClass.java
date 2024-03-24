@@ -38,7 +38,7 @@ public class SetupClass {
 		TestUtils utils = new TestUtils(propertyFile);
 
 		System.out.println("Setting up the browser");
-		System.setProperty(utils.getProperty("Chrome"), projectPath + utils.selectFromChain("SelectedVersion"));
+		System.setProperty(utils.getProperty("Chrome"),  utils.selectFromChain("SelectedVersion"));
 
 		ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
