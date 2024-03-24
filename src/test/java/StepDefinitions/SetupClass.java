@@ -40,10 +40,8 @@ public class SetupClass {
 		System.out.println("Setting up the browser");
 		System.setProperty(utils.getProperty("Chrome"),  utils.selectFromChain("SelectedVersion"));
 
-		ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        driver = new ChromeDriver(options);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 		basePage = new BasePage(driver);
 		setup.beforeHooks(scenario);
